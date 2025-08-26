@@ -26,8 +26,10 @@ To run code for a specific blog:
 ```bash
 cd 1_rag_demystified    
 python -m venv .venv
+
 # On Linux/Mac:
 source .venv/bin/activate
+
 # On Windows:
 .venv\Scripts\activate
 pip install -r requirements.txt
