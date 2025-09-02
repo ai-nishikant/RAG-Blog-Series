@@ -14,6 +14,9 @@ The series walks you through the journey of **Retrieval-Augmented Generation (RA
 - [Blog 1 – RAG Demystified: A Beginner’s Guide to What It Is and Why It Matters](./1_rag_demystified/)  
   Learn why LLMs hallucinate, why retrieval matters, and build a toy keyword-based Q&A system.  
 
+- [Blog 1 – Speaking in Vectors: A Beginner's Guide to Embeddings and Semantic Search](./2_speaking_in_vectors/)  
+  LUnderstanding embeddings, cosine similarity, and FAISS - the building blocks of smarter RAG systems.  
+
 (More coming soon: evaluation, monitoring, observability, deployment…)
 
 ---
