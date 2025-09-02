@@ -2,7 +2,7 @@
 
 This repository provides the companion code for the blog post:
 
-**"Speaking in Vectors — Embeddings for Meaning"**
+ [**Speaking in Vectors: A Beginner’s Guide to Embeddings and Semantic Search**](https://medium.com/@ai.nishikant/speaking-in-vectors-1b8142f9ec87) 
 
 It includes a simple yet powerful implementation of semantic search using:
 

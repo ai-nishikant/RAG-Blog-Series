@@ -1,6 +1,6 @@
 # RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters
 
-This folder contains the code for **RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters** of the RAG Blog Series.  
+This folder contains the code for [**RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters**](https://medium.com/@ai.nishikant/rag-demystified-a-beginners-guide-to-what-it-is-and-why-it-matters-8df6a7388848) of the RAG Blog Series.  
 It introduces the concept of Retrieval-Augmented Generation (RAG) and shows why retrieval matters by building a simple keyword-based Q&A system.
 
 ## What does `keyword_rag.py` do?
