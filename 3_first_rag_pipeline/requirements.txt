@@ -1,0 +1,7 @@
+python-dotenv
+sentence-transformers
+faiss-cpu
+numpy
+PyPDF2
+openai
+groq   # optional: only needed if using Groq API instead of OpenAI
