@@ -32,7 +32,10 @@ The series walks you through the journey of **Retrieval-Augmented Generation (RA
   Learn why LLMs hallucinate, why retrieval matters, and build a toy keyword-based Q&A system.  
 
 - [Blog 2 – Speaking in Vectors: A Beginner's Guide to Embeddings and Semantic Search](./2_speaking_in_vectors/)  
-  LUnderstanding embeddings, cosine similarity, and FAISS - the building blocks of smarter RAG systems.  
+  Understanding embeddings, cosine similarity, and FAISS - the building blocks of smarter RAG systems.  
+
+- [Blog 3 – Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers](./3_first_rag_pipeline/)  
+  Build your first RAG pipeline with retrieval + LLMs and turn documents into reliable, grounded AI answer
 
 (More coming soon: evaluation, monitoring, observability, deployment…)
 

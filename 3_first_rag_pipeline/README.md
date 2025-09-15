@@ -153,4 +153,4 @@ Here are some common issues and how to fix them:
 This is part of the **RAG Blog Series**:  
 1. [RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters](https://medium.com/@ai.nishikant/rag-demystified-a-beginners-guide-to-what-it-is-and-why-it-matters-8df6a7388848)  
 2. [Speaking in Vectors: A Beginner’s Guide to Embeddings and Semantic Search](https://medium.com/@ai.nishikant/speaking-in-vectors-1b8142f9ec87)  
-3. *Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers* (this repo)  
+3. [*Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers*] (https://medium.com/@ai.nishikant/building-your-first-rag-pipeline-5de171f4cf8f)  
