@@ -1,0 +1,5 @@
+The design section describes a modular architecture with independent retrieval and generation layers.
+Each component can scale horizontally for higher throughput.
+APIs follow REST conventions with JSON-based data exchange.
+Caching and rate limiting are implemented to stabilize latency.
+The design allows new retrievers or LLMs to be integrated without major refactoring.

@@ -1,0 +1,5 @@
+The incident timeline captures key events from detection to resolution.
+Initial alerts were triggered by anomaly scores exceeding thresholds.
+Triage confirmed a misconfiguration in the indexing pipeline.
+Containment was achieved by rolling back the faulty release.
+Lessons learned include stronger canary testing and improved alert routing.

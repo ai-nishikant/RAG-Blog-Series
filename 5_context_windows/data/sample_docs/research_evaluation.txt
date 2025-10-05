@@ -1,0 +1,5 @@
+The evaluation compares multiple approaches, datasets, and metrics to benchmark model performance.
+Baselines include both supervised and unsupervised methods.
+Metrics such as accuracy, recall, and F1 score are reported for each dataset.
+The study concludes that domain-specific fine-tuning yields consistent improvements.
+Results are summarized in Table 2, followed by an ablation analysis.

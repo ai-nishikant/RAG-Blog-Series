@@ -1,0 +1,5 @@
+Release 2.5.1 introduces support for structured metadata in retrieval results.
+Security fixes address token handling in batch APIs.
+Performance improved for document embeddings and chunk generation.
+Known issues include incomplete support for PDF tables.
+Next release will deprecate legacy endpoints and migrate to the unified retrieval API.

@@ -1,0 +1,6 @@
+{"qid":"q1","question":"Summarize the evaluation approach and key results.","relevant_ids":["research_evaluation"]}
+{"qid":"q2","question":"List the main objectives and governance elements of the corporate policy update.","relevant_ids":["policy_overview"]}
+{"qid":"q3","question":"Describe the system architecture and how it scales while keeping latency stable.","relevant_ids":["system_design"]}
+{"qid":"q4","question":"What recurring user issues were identified and what actions reduced support load?","relevant_ids":["support_summary"]}
+{"qid":"q5","question":"Outline the incident response flow from detection to lessons learned.","relevant_ids":["incident_timeline"]}
+{"qid":"q6","question":"What changes were introduced in the 2023 release and which limitations remain?","relevant_ids":["release_notes_2023"]}
