@@ -22,13 +22,13 @@
 This repository contains the code companion for the blog:  
 **“How to Optimize RAG Context Windows for Smarter Retrieval.”**  
 
-It demonstrates practical techniques for optimizing retrieval and context management in **Retrieval-Augmented Generation (RAG)** systems:  
+It demonstrates multiple strategies for optimizing retrieval and managing context in **Retrieval-Augmented Generation (RAG)** systems — from candidate selection to compression:  
 - Multi-stage retrieval  
 - Multi-query rewriting  
 - Reranking (Cohere or lexical fallback)  
 - Dynamic metadata filtering  
 - Summarization under tight context (flagship demo)  
-- Hybrid pipelines combining multiple techniques  
+- Hybrid orchestration combining all techniques  
 
 ---
 
@@ -37,12 +37,12 @@ It demonstrates practical techniques for optimizing retrieval and context manage
 ```
 5_context_windows/
 ├── scripts/
-│   ├── 01_multistage.py
-│   ├── 02_multiquery.py
-│   ├── 03_rerank.py
-│   ├── 04_filtering.py
-│   ├── 05_summarize.py        # Flagship demo script
-│   └── 06_hybrid.py
+│   ├── 01_multistage.py        # Broad → refined retrieval
+│   ├── 02_multiquery.py        # Multi-query rewriting (Groq or static)
+│   ├── 03_rerank.py            # Cohere v3 or lexical fallback reranking
+│   ├── 04_filtering.py         # Dynamic metadata filtering
+│   ├── 05_summarize.py         # Flagship demo: summarization under tight context
+│   └── 06_hybrid.py            # End-to-end pipeline combining all techniques
 ├── data/
 │   ├── sample_docs/            # Tiny synthetic corpus for testing
 │   └── queries.jsonl           # Example questions with relevance info
@@ -67,62 +67,69 @@ pip install -r requirements.txt
 ```
 
 ### 3. Configure API keys  
-Copy the example environment file and edit it with your API keys:  
+Copy the example environment file and edit it with your keys:  
 ```bash
 cp .env.example .env
 ```
 
-Fill in as needed:
-- `GROQ_API_KEY` for summarization and query rewriting  
-- `COHERE_API_KEY` for reranking (optional)  
-- `OPENAI_API_KEY` if you use OpenAI for comparison  
+Fill in as needed:  
+- `GROQ_API_KEY` → summarization and query rewriting  
+- `COHERE_API_KEY` → reranking (optional)  
+- `OPENAI_API_KEY` → comparison or testing  
+
+Use the current supported model:  
+```bash
+GROQ_MODEL=llama-3.1-8b-instant
+```
 
 ---
 
-## ▶️ Run the demos  
+## ▶️ Hands-On Demos  
 
-### Flagship: Summarization under Tight Context  
+### Flagship: Summarization under Tight Context (Groq)
+Compare “small” vs “large” context plans:
+
 ```bash
-python scripts/05_summarize.py --data_dir data/sample_docs --k 5 --use_llm
+# Small window (forces summarization)
+python scripts/05_summarize.py   --question "Summarize the evaluation approach and key results."   --data_dir data/sample_docs   --k 5   --plan small   --use_llm
+
+# Large window (uses full context)
+python scripts/05_summarize.py   --question "Summarize the evaluation approach and key results."   --data_dir data/sample_docs   --k 8   --plan large
 ```
 
-### Other techniques  
+### Explore Other Techniques  
+You can also run each supporting script individually to explore specific retrieval optimizations:
+
 ```bash
-python scripts/01_multistage.py
-python scripts/02_multiquery.py
-python scripts/03_rerank.py
-python scripts/04_filtering.py
-python scripts/06_hybrid.py
+python scripts/01_multistage.py        # Multi-stage retrieval
+python scripts/02_multiquery.py        # Multi-query rewriting
+python scripts/03_rerank.py            # Reranking (Cohere/lexical)
+python scripts/04_filtering.py         # Metadata filtering
+python scripts/06_hybrid.py            # End-to-end hybrid pipeline
 ```
 
-Each script prints:
+Each prints:
 - Retrieved document IDs  
 - Token counts before and after optimization  
-- Time taken per step  
+- Context composition summaries  
 
 ---
 
 ## 📝 Notes  
 
-- All demos run locally and finish within seconds.  
-- Groq API is used for summarization and rewriting (optional).  
-- Cohere API can be enabled for reranking with `--use_cohere`.  
-- Each script mirrors a section of the blog and is designed for clarity, not production use.  
+- All demos run locally and complete within seconds.  
+- LLM calls (Groq, Cohere) are **optional** and safely degrade to local fallbacks.  
+- Each script corresponds to a core concept in the blog, designed for **clarity, not production**.  
+- Token counts use `tiktoken` for approximate context measurement.  
 
 ---
 
 ## 🔧 Troubleshooting  
 
-1. **`ModuleNotFoundError`** → Ensure you installed all dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Groq or Cohere API key missing** → Add to `.env` and reload your shell.
-
-3. **Slow or stuck model downloads** → First-time download for `sentence-transformers`; retry after network stabilization.
-
-4. **Empty retrieval results** → Try adjusting `--k` or modifying the sample corpus under `data/sample_docs/`.
+1. **`data_dir not found`** → Ensure you run scripts from inside `5_context_windows/`.  
+2. **Groq model error (`model_decommissioned`)** → Update to `llama-3.1-8b-instant`.  
+3. **Cohere key missing** → Add `COHERE_API_KEY` in `.env`.  
+4. **Slow model downloads** → First-time setup for `sentence-transformers`.  
 
 ---
 
@@ -133,4 +140,4 @@ This is part of the **RAG Blog Series**:
 2. [Speaking in Vectors: A Beginner’s Guide to Embeddings and Semantic Search](https://medium.com/@ai.nishikant/speaking-in-vectors-1b8142f9ec87)  
 3. [Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers](https://medium.com/@ai.nishikant/building-your-first-rag-pipeline-5de171f4cf8f)  
 4. [Better Chunks, Better Answers: Chunking Strategies for Smarter RAG](https://medium.com/@ai.nishikant/better-chunks-better-answers-chunking-strategies-for-smarter-rag)  
-5. [How to Optimize RAG Context Windows for Smarter Retrieval](https://medium.com/@ai.nishikant/how-to-optimize-rag-context-windows-for-smarter-retrieval)
+5. [How to Optimize RAG Context Windows for Smarter Retrieval](https://medium.com/@ai.nishikant/how-to-optimize-rag-context-windows-for-smarter-retrieval)  
