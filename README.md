@@ -34,8 +34,12 @@ The series walks you through the journey of **Retrieval-Augmented Generation (RA
 - [Blog 3 – Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers](./3_first_rag_pipeline/)  
   Build your first RAG pipeline with retrieval + LLMs and turn documents into reliable, grounded AI answer
 
-- [Better Chunks, Better Answers: Chunking Strategies for Smarter RAG](./4_chunking_strategies)   
+- [Blog 4 – Better Chunks, Better Answers: Chunking Strategies for Smarter RAG](./4_chunking_strategies)   
   Better chunking, better RAG: explore fixed, overlap, recursive & semantic strategies to boost LLM retrieval accuracy
+
+- [Blog 5 – How to Optimize RAG Context Windows for Smarter Retrieval](./5_context_windows)   
+  Learn how to balance retrieval quality and token efficiency using adaptive context strategies, summarization, and multi-stage retrieval.
+
   
 (More coming soon: evaluation, monitoring, observability, deployment…)
 
