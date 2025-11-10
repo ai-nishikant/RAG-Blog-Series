@@ -32,7 +32,7 @@ It demonstrates compact, runnable examples of prompt strategies discussed in the
 ## 📂 Project Structure
 
 ```
-6_prompts_companion/
+6_smarter_prompts/
 ├── scripts/
 │   ├── zero_vs_fewshot.py
 │   ├── chain_of_thought.py
@@ -140,7 +140,7 @@ python scripts/constraint_json.py
 
 ## 🔧 Troubleshooting
 
-1) Run from inside `6_prompts_companion/`.  
+1) Run from inside `6_smarter_prompts/`.  
 2) Add your API key in `.env`.  
 3) Token usage may show NA if SDK doesn’t expose it.  
 4) Constraint validation errors print inline.
