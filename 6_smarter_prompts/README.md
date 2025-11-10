@@ -1,0 +1,158 @@
+# 📘 Smarter Prompts in RAG — Code Companion
+
+<p align="center">
+
+  <!-- Repo Metadata -->
+  <a href="https://github.com/ai-nishikant/RAG-Blog-Series"><img src="https://img.shields.io/github/repo-size/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Repo%20Size&color=blue"></a>
+  <a href="https://github.com/ai-nishikant/RAG-Blog-Series"><img src="https://img.shields.io/github/languages/top/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=python&label=Python&color=blue"></a>
+  <a href="https://github.com/ai-nishikant/RAG-Blog-Series/commits/main"><img src="https://img.shields.io/github/last-commit/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Last%20Commit&color=blue"></a>
+  <a href="https://github.com/ai-nishikant/RAG-Blog-Series/stargazers"><img src="https://img.shields.io/github/stars/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Stars&color=blue"></a>
+  <a href="https://github.com/ai-nishikant/RAG-Blog-Series/network/members"><img src="https://img.shields.io/github/forks/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Forks&color=blue"></a>
+
+  <!-- Blog & Social -->
+  <a href="https://medium.com/@ai.nishikant"><img src="https://img.shields.io/badge/Medium-Read%20My%20Blog-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
+  <a href="https://linkedin.com/in/nishikant-surwade"><img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
+
+</p>
+
+This repository contains the code companion for the blog:  
+**“Smarter Prompts: Engineering Better Instructions in RAG.”**
+
+It demonstrates compact, runnable examples of prompt strategies discussed in the post. Each script is intentionally small and self-contained—designed for clarity over production complexity.
+
+- Zero-shot vs Few-shot prompting  
+- Chain-of-Thought prompting  
+- Self-Consistency prompting  
+- Instruction Layering (global + task directives)  
+- Retrieval-Aware prompting (recency-weighted toy example)  
+- Constraint-based prompting (JSON schema)
+
+---
+
+## 📂 Project Structure
+
+```
+6_prompts_companion/
+├── scripts/
+│   ├── zero_vs_fewshot.py
+│   ├── chain_of_thought.py
+│   ├── self_consistency.py
+│   ├── instruction_layering.py
+│   ├── retrieval_aware.py
+│   └── constraint_json.py
+├── data/
+│   ├── support_tickets/
+│   ├── compliance_policies/
+│   ├── vendor_risk/
+│   ├── news/
+│   └── contracts/
+├── prompts/
+│   ├── templates.yaml
+│   └── few_shot_examples.yaml
+├── src/
+│   ├── llm_client.py
+│   ├── utils.py
+│   └── eval_metrics.py
+├── outputs/
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+---
+
+## ⚙️ Setup
+
+### 1) Clone and enter
+```bash
+git clone https://github.com/ai-nishikant/RAG-Blog-Series.git
+cd RAG-Blog-Series/6_prompts_companion
+```
+
+### 2) Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3) API key
+Copy and edit the environment file:
+```bash
+cp .env.example .env
+```
+Add your key, for example:
+- `OPENAI_API_KEY=...`
+
+(Optional) If your SDK returns token usage, scripts will log it; otherwise print “NA”.
+
+---
+
+## ▶️ Quickstart (Run Any Demo)
+
+Each script loads a tiny dataset, renders a prompt template, calls the model once (or a few times), prints the answer, and saves JSONL output.
+
+### A) Zero-shot vs Few-shot
+```bash
+python scripts/zero_vs_fewshot.py
+```
+
+### B) Chain-of-Thought
+```bash
+python scripts/chain_of_thought.py
+```
+
+### C) Self-Consistency
+```bash
+python scripts/self_consistency.py
+```
+
+### D) Instruction Layering
+```bash
+python scripts/instruction_layering.py
+```
+
+### E) Retrieval-Aware
+```bash
+python scripts/retrieval_aware.py
+```
+
+### F) Constraint-based (JSON)
+```bash
+python scripts/constraint_json.py
+```
+
+---
+
+## 🧪 Metrics and Outputs
+
+- **ROUGE-1 / ROUGE-L** (optional)
+- **Latency** and **token usage**
+- All runs save to `outputs/*.jsonl`
+
+---
+
+## 📝 Notes
+
+- These demos favor clarity, not production readiness.  
+- Datasets are toy-sized but realistic.  
+- Adjust `src/llm_client.py` to use your chosen provider.
+
+---
+
+## 🔧 Troubleshooting
+
+1) Run from inside `6_prompts_companion/`.  
+2) Add your API key in `.env`.  
+3) Token usage may show NA if SDK doesn’t expose it.  
+4) Constraint validation errors print inline.
+
+---
+
+## 🔗 Blog Series
+
+This companion belongs to the **RAG Blog Series**:  
+1. RAG Demystified  
+2. Speaking in Vectors  
+3. Building Your First RAG Pipeline  
+4. Better Chunks, Better Answers  
+5. How to Optimize RAG Context Windows  
+6. Smarter Prompts: Engineering Better Instructions in RAG
