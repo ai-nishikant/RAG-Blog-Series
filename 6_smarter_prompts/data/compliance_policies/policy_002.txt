@@ -1,0 +1,1 @@
+Access control updates: privileged accounts require MFA and quarterly credential rotation. Third-party vendors must sign data processing addendum.

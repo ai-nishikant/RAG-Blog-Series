@@ -1,0 +1,1 @@
+The 2024 compliance policy adds AI auditing requirements: maintain model logs, retain data lineage, and document evaluation. Non-compliance triggers quarterly review.
