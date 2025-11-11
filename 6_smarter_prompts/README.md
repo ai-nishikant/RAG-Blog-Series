@@ -92,32 +92,32 @@ Each script loads a tiny dataset, renders a prompt template, calls the model onc
 
 ### A) Zero-shot vs Few-shot
 ```bash
-python scripts/zero_vs_fewshot.py
+python -m scripts.zero_vs_fewshot
 ```
 
 ### B) Chain-of-Thought
 ```bash
-python scripts/chain_of_thought.py
+python -m scripts.chain_of_thought
 ```
 
 ### C) Self-Consistency
 ```bash
-python scripts/self_consistency.py
+python -m scripts.self_consistency
 ```
 
 ### D) Instruction Layering
 ```bash
-python scripts/instruction_layering.py
+python -m scripts.instruction_layering
 ```
 
 ### E) Retrieval-Aware
 ```bash
-python scripts/retrieval_aware.py
+python -m scripts.retrieval_aware
 ```
 
 ### F) Constraint-based (JSON)
 ```bash
-python scripts/constraint_json.py
+python -m scripts.constraint_json
 ```
 
 ---
@@ -126,7 +126,7 @@ python scripts/constraint_json.py
 
 - **ROUGE-1 / ROUGE-L** (optional)
 - **Latency** and **token usage**
-- All runs save to `outputs/*.jsonl`
+
 
 ---
 
