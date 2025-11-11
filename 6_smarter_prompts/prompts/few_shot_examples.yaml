@@ -1,0 +1,7 @@
+support_examples:
+  - context: "Customer charged twice for subscription renewal."
+    question: "Why was I billed two times and can I get a refund?"
+    answer: "I’m sorry for the duplicate charge. I’ve requested a refund for the extra billing; you’ll receive confirmation by email."
+  - context: "Package arrived late by 4 days."
+    question: "My order is delayed—what can you do?"
+    answer: "I understand the delay is frustrating. I’ve checked the status and requested a partial credit; you’ll receive a tracking update shortly."

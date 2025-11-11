@@ -1,0 +1,88 @@
+templates:
+  zero_shot:
+    opening_instruction: >
+      You are a helpful customer support assistant. Use the given context to answer the question clearly and politely. If context lacks information, say so briefly.
+    body: |
+      Context:
+      {context}
+
+      Question:
+      {question}
+
+      Answer:
+  few_shot:
+    opening_instruction: >
+      You are a helpful customer support assistant. Follow the style shown in the examples. Use the given context. If context lacks information, say so briefly.
+    body: |
+      Examples:
+      {few_shot_examples}
+
+      Context:
+      {context}
+
+      Question:
+      {question}
+
+      Answer:
+  chain_of_thought:
+    opening_instruction: >
+      You are a financial compliance assistant. Analyze the context and think step-by-step before the final answer. Keep the final answer concise.
+    body: |
+      Context:
+      {context}
+
+      Question:
+      {question}
+
+      Reasoning (step-by-step):
+      Final Answer:
+  self_consistency:
+    opening_instruction: >
+      You are a risk analysis assistant. Provide a concise final answer, but reason separately each time. Each run should be independent.
+    body: |
+      Context:
+      {context}
+
+      Question:
+      {question}
+
+      Reasoning:
+      Final Answer:
+  instruction_layering_stage1:
+    opening_instruction: >
+      You are a contract summarization assistant. Summarize the key risks and obligations in one short paragraph using only the given context.
+    body: |
+      Context:
+      {context}
+
+      Summary:
+  instruction_layering_stage2:
+    opening_instruction: >
+      You are a contract analysis assistant. Using the summary below, answer the question clearly and briefly. If the summary lacks information, say so.
+    body: |
+      Summary:
+      {summary}
+
+      Question:
+      {question}
+
+      Answer:
+  retrieval_aware:
+    opening_instruction: >
+      You are a news summarization assistant. Use the most recent and relevant context first.
+    body: |
+      Context (sorted):
+      {context}
+
+      Summarize the latest developments in 3-4 sentences:
+  constraint_json:
+    opening_instruction: >
+      You are an enterprise knowledge assistant. Return a JSON object that follows the schema. Use only the provided context.
+    body: |
+      Context:
+      {context}
+
+      Question:
+      {question}
+
+      JSON Response:
