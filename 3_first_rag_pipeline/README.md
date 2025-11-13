@@ -2,7 +2,7 @@
 
 
 <!-- Center-aligned professional badges -->
-<p align="center">
+<div align="center">
 
   <!-- First Line: Repo Metadata + GitHub Engagement (All Blue) -->
   <a href="https://github.com/ai-nishikant/RAG-Blog-Series"><img src="https://img.shields.io/github/repo-size/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Repo%20Size&color=blue"></a>
@@ -13,7 +13,7 @@
   <a href="https://medium.com/@ai.nishikant/building-your-first-rag-pipeline-5de171f4cf8f"><img src="https://img.shields.io/badge/Medium-Building%20Your%20First%20RAG%20Pipeline-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>  
   <a href="https://linkedin.com/in/nishikant-surwade"><img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
 
-</p>
+</div>
 
 This repository contains the code companion for the blog:  
 **“Building Your First RAG Pipeline: How Retrieval + LLMs Deliver Reliable Answers”**  

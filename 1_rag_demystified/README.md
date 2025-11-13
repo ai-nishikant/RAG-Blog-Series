@@ -1,7 +1,7 @@
 # RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters
 
 <!-- Center-aligned professional badges -->
-<p align="center">
+<div align="center">
 
   <!-- First Line: Repo Metadata + GitHub Engagement (All Blue) -->
   <a href="https://github.com/ai-nishikant/RAG-Blog-Series"><img src="https://img.shields.io/github/repo-size/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=github&label=Repo%20Size&color=blue"></a>
@@ -12,7 +12,7 @@
     <a href="https://medium.com/@ai.nishikant/rag-demystified-a-beginners-guide-to-what-it-is-and-why-it-matters-8df6a7388848"><img src="https://img.shields.io/badge/Medium-RAG%20Demystified-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
   <a href="https://linkedin.com/in/nishikant-surwade"><img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
 
-</p>
+</div>
 
 This folder contains the code for [**RAG Demystified — A Beginner’s Guide to What It Is and Why It Matters**](https://medium.com/@ai.nishikant/rag-demystified-a-beginners-guide-to-what-it-is-and-why-it-matters-8df6a7388848) of the RAG Blog Series.  
 It introduces the concept of Retrieval-Augmented Generation (RAG) and shows why retrieval matters by building a simple keyword-based Q&A system.
