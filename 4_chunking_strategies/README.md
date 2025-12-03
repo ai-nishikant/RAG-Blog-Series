@@ -8,7 +8,7 @@
   <a href="https://github.com/ai-nishikant/RAG-Blog-Series"><img src="https://img.shields.io/github/languages/top/ai-nishikant/RAG-Blog-Series?style=flat-square&logo=python&label=Python&color=blue"></a>
   <!-- Second Line: Blog & Social (Brand Colors) -->
   <a href="https://medium.com/@ai.nishikant"><img src="https://img.shields.io/badge/Medium-Read%20My%20Blog-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
-  <a href="https://medium.com/@ai.nishikant/better-chunks-better-answers-chunking-strategies-for-smarter-rag"><img src="https://img.shields.io/badge/Medium-Chunking%20Strategies%20for%20Smarter%20RAG-00ab6c?style=flat-square&logo=medium&logoColor=white"></a> 
+  <a href="https://medium.com/@ai.nishikant/rag-chunking-strategies-ba414704c33e"><img src="https://img.shields.io/badge/Medium-Better%20Chunks%2C%20Better%20Answers-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
   <a href="https://linkedin.com/in/nishikant-surwade"><img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
 
 </div>

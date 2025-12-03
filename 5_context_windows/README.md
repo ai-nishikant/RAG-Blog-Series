@@ -9,7 +9,7 @@
 
   <!-- Second Line: Blog & Social (Brand Colors) -->
   <a href="https://medium.com/@ai.nishikant"><img src="https://img.shields.io/badge/Medium-Read%20My%20Blog-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
-  <a href="https://medium.com/@ai.nishikant/how-to-optimize-rag-context-windows-for-smarter-retrieval"><img src="https://img.shields.io/badge/Medium-How%20to%20Optimize%20RAG%20Context%20Windows%20for%20Smarter%20Retrieval-00ab6c?style=flat-square&logo=medium&logoColor=white"></a> 
+  <a href="https://medium.com/@ai.nishikant/how-to-optimize-rag-context-windows-b26859f03b2d"> <img src="https://img.shields.io/badge/Medium-Optimize%20RAG%20Context%20Windows-00ab6c?style=flat-square&logo=medium&logoColor=white"></a>
   <a href="https://linkedin.com/in/nishikant-surwade"><img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
 
 </div>
