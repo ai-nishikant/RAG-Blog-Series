@@ -37,7 +37,10 @@ The series walks you through the journey of **Retrieval-Augmented Generation (RA
 - [Blog 5 – How to Optimize RAG Context Windows for Smarter Retrieval](./5_context_windows)   
   Learn how to balance retrieval quality and token efficiency using adaptive context strategies, summarization, and multi-stage retrieval.
 
-  
+- [Blog 6 - Smarter Prompts: Engineering Better Instructions in RAG ](./6_smarter_prompts/)
+  Master smarter prompt design for Retrieval-Augmented Generation (RAG). Explore zero-shot, few-shot, chain-of-thought, and constraint-based prompting with real code examples.
+
+   
 (More coming soon: evaluation, monitoring, observability, deployment…)
 
 ---
