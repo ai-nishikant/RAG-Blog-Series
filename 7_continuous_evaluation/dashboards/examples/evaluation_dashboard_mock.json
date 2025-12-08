@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "generated_at": "2025-01-12T10:25:00Z",
+  "source": "7_continuous_evaluation_demo",
+  "summary": {
+    "total_runs": 4,
+    "total_failures": 2,
+    "failure_rate": 0.5,
+    "average_intrinsic": 0.6075
+  },
+  "by_stage": {
+    "stage_a": {
+      "pass_count": 4,
+      "fail_count": 0
+    },
+    "stage_b": {
+      "pass_count": 3,
+      "fail_count": 1
+    },
+    "stage_c": {
+      "pass_count": 2,
+      "fail_count": 2
+    }
+  },
+  "by_action": {
+    "noop": 2,
+    "adjust_retrieval": 1,
+    "adjust_prompt": 1
+  },
+  "runs": [
+    {
+      "scenario": "healthy_pipeline",
+      "description": "All stages operate normally. No drift expected.",
+      "intrinsic": 0.83,
+      "stage_a_passed": true,
+      "stage_b_passed": true,
+      "stage_c_passed": true,
+      "overall_passed": true,
+      "action": "noop",
+      "timestamp": "2025-01-12T10:20:11Z"
+    },
+    {
+      "scenario": "retrieval_drift",
+      "description": "Retriever returns too few or irrelevant documents.",
+      "intrinsic": 0.18,
+      "stage_a_passed": true,
+      "stage_b_passed": false,
+      "stage_c_passed": false,
+      "overall_passed": false,
+      "action": "adjust_retrieval",
+      "timestamp": "2025-01-12T10:20:12Z"
+    },
+    {
+      "scenario": "reasoning_drift",
+      "description": "Model output is poorly grounded despite good retrieval.",
+      "intrinsic": 0.39,
+      "stage_a_passed": true,
+      "stage_b_passed": true,
+      "stage_c_passed": false,
+      "overall_passed": false,
+      "action": "adjust_prompt",
+      "timestamp": "2025-01-12T10:20:13Z"
+    },
+    {
+      "scenario": "benign_drift",
+      "description": "Small changes but still above passing thresholds.",
+      "intrinsic": 0.73,
+      "stage_a_passed": true,
+      "stage_b_passed": true,
+      "stage_c_passed": true,
+      "overall_passed": true,
+      "action": "noop",
+      "timestamp": "2025-01-12T10:20:14Z"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "overall_pass_fail_pie",
+      "type": "pie",
+      "title": "Overall Evaluation Outcomes",
+      "data_source": "summary",
+      "mapping": {
+        "passed_key": "total_runs",
+        "failed_key": "total_failures"
+      }
+    },
+    {
+      "id": "intrinsic_by_scenario_bar",
+      "type": "bar",
+      "title": "Intrinsic Score by Scenario",
+      "data_source": "runs",
+      "mapping": {
+        "x_field": "scenario",
+        "y_field": "intrinsic"
+      }
+    },
+    {
+      "id": "stage_failure_heatmap",
+      "type": "heatmap",
+      "title": "Stage Failures by Stage",
+      "data_source": "by_stage",
+      "mapping": {
+        "x_field": "stage",
+        "y_field": "fail_count"
+      }
+    },
+    {
+      "id": "actions_distribution",
+      "type": "bar",
+      "title": "Controller Actions Distribution",
+      "data_source": "by_action",
+      "mapping": {
+        "x_field": "action",
+        "y_field": "count"
+      }
+    }
+  ]
+}
