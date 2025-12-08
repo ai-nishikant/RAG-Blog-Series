@@ -1,0 +1,64 @@
+{
+  "references": [
+    {
+      "id": "ref_ai_auditing_2024",
+      "query": "What changed in the AI auditing policy in 2024?",
+      "reference_answer": "The policy was updated in 2024 to include new AI auditing guidelines, introducing clearer audit procedures, compliance steps, and expanded oversight requirements."
+    },
+    {
+      "id": "ref_refund_window",
+      "query": "Within how many days of purchase can a customer request a refund?",
+      "reference_answer": "Refund requests must be submitted within 30 days of purchase."
+    },
+    {
+      "id": "ref_bulk_export_free_tier",
+      "query": "Does the free tier support bulk exports of all records?",
+      "reference_answer": "Bulk exports are not supported in the free tier. They are only available on paid subscription plans."
+    },
+    {
+      "id": "ref_bulk_export_paid_tier",
+      "query": "Which subscription tiers support bulk export of all records?",
+      "reference_answer": "Bulk export is supported in the Professional and Enterprise tiers, but not in the Free or Starter plans."
+    },
+    {
+      "id": "ref_data_retention",
+      "query": "How long is customer data retained, and are there options for early deletion?",
+      "reference_answer": "Customer data is retained for 12 months unless early deletion is requested. Early deletion is available through the data deletion request process."
+    },
+    {
+      "id": "ref_prohibited_use_cases",
+      "query": "Are there any prohibited use cases for this AI system?",
+      "reference_answer": "Yes. The system cannot be used for biometric identification, credit scoring, or other high-risk applications without explicit authorization."
+    },
+    {
+      "id": "ref_response_times",
+      "query": "What are the expected response times for typical queries?",
+      "reference_answer": "Typical response times range between 300–800 ms, depending on load and retrieval depth."
+    },
+    {
+      "id": "ref_ai_auditing_workflow_concise",
+      "query": "Give a concise explanation of how the AI auditing workflow operates.",
+      "reference_answer": "The workflow retrieves relevant policies, analyzes compliance requirements, and summarizes key findings into actionable steps."
+    },
+    {
+      "id": "ref_integration_apis",
+      "query": "What integration APIs are available for connecting this system?",
+      "reference_answer": "Available APIs include REST endpoints for uploading documents, querying the knowledge base, and retrieving audit logs."
+    },
+    {
+      "id": "ref_model_limitations",
+      "query": "Explain why your answers may sometimes be incomplete or inaccurate.",
+      "reference_answer": "Answers may be incomplete due to missing retrieval context, out-of-date source documents, or insufficient grounding constraints in the prompt."
+    },
+    {
+      "id": "ref_operational_sla",
+      "query": "What is the expected uptime or SLA for this service?",
+      "reference_answer": "The system maintains a 99.5% uptime SLA, with incident notifications published within 30 minutes."
+    },
+    {
+      "id": "ref_incident_response",
+      "query": "How are operational incidents detected and resolved?",
+      "reference_answer": "Incidents are detected through automated monitoring and escalated to on-call engineers, who resolve issues based on predefined SRE playbooks."
+    }
+  ]
+}
