@@ -1,0 +1,8 @@
+{"timestamp": "2025-01-12T10:15:43Z", "query_id": "q_001", "query": "What changed in the AI auditing policy in 2024?", "metadata": {"domain": "policy", "user_segment": "enterprise"}}
+{"timestamp": "2025-01-12T10:15:44Z", "query_id": "q_002", "query": "Within how many days can customers request a refund?", "metadata": {"domain": "policy", "user_segment": "retail"}}
+{"timestamp": "2025-01-12T10:15:45Z", "query_id": "q_003", "query": "Does the free tier support bulk export?", "metadata": {"domain": "product", "user_segment": "free_tier"}}
+{"timestamp": "2025-01-12T10:15:46Z", "query_id": "q_004", "query": "Explain the 2024 AI auditing update concisely.", "metadata": {"domain": "policy", "user_segment": "developer"}}
+{"timestamp": "2025-01-12T10:15:47Z", "query_id": "q_005", "query": "What integration APIs are available?", "metadata": {"domain": "product", "user_segment": "enterprise"}}
+{"timestamp": "2025-01-12T10:15:48Z", "query_id": "q_006", "query": "What is the SLA uptime guarantee?", "metadata": {"domain": "operations", "user_segment": "enterprise"}}
+{"timestamp": "2025-01-12T10:15:49Z", "query_id": "q_007", "query": "Does the system support biometric identification?", "metadata": {"domain": "compliance", "user_segment": "internal"}}
+{"timestamp": "2025-01-12T10:15:50Z", "query_id": "q_008", "query": "How are incidents detected and resolved?", "metadata": {"domain": "operations", "user_segment": "enterprise"}}

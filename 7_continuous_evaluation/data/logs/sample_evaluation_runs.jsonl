@@ -1,0 +1,7 @@
+{"scenario": "healthy_pipeline", "intrinsic": 0.83, "stage_a_passed": true, "stage_b_passed": true, "stage_c_passed": true, "overall_passed": true, "action": "noop", "timestamp": "2025-01-12T10:20:11Z"}
+{"scenario": "retrieval_drift", "intrinsic": 0.18, "stage_a_passed": true, "stage_b_passed": false, "stage_c_passed": false, "overall_passed": false, "action": "adjust_retrieval", "timestamp": "2025-01-12T10:20:12Z"}
+{"scenario": "reasoning_drift", "intrinsic": 0.12, "stage_a_passed": true, "stage_b_passed": true, "stage_c_passed": false, "overall_passed": false, "action": "adjust_prompt", "timestamp": "2025-01-12T10:20:13Z"}
+{"scenario": "benign_drift", "intrinsic": 0.67, "stage_a_passed": true, "stage_b_passed": true, "stage_c_passed": true, "overall_passed": true, "action": "noop", "timestamp": "2025-01-12T10:20:14Z"}
+{"scenario": "retrieval_drift_minor", "intrinsic": 0.42, "stage_a_passed": true, "stage_b_passed": false, "stage_c_passed": true, "overall_passed": false, "action": "adjust_retrieval", "timestamp": "2025-01-12T10:20:15Z"}
+{"scenario": "reasoning_drift_minor", "intrinsic": 0.31, "stage_a_passed": true, "stage_b_passed": true, "stage_c_passed": false, "overall_passed": false, "action": "adjust_prompt", "timestamp": "2025-01-12T10:20:16Z"}
+{"scenario": "healthy_pipeline_repeat", "intrinsic": 0.81, "stage_a_passed": true, "stage_b_passed": true, "stage_c_passed": true, "overall_passed": true, "action": "noop", "timestamp": "2025-01-12T10:20:17Z"}
