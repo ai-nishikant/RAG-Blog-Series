@@ -1,0 +1,52 @@
+# ============================================================
+# evaluation_config.yaml
+# Configuration for the Continuous Evaluation Pipeline
+# ============================================================
+
+# ------------------------------------------------------------
+# Stage Thresholds
+# ------------------------------------------------------------
+thresholds:
+  intrinsic_min: 0.40              # minimum grounding score needed to pass Stage C
+  min_retrieved_docs: 3            # minimum number of documents for Stage B
+  allow_duplicate_docs: false      # whether duplicate IDs are allowed in retrieval
+
+# ------------------------------------------------------------
+# Weighting for Metrics (future expansion)
+# ------------------------------------------------------------
+weights:
+  intrinsic: 0.5
+  extrinsic: 0.3
+  behavioral: 0.2
+
+# ------------------------------------------------------------
+# Feature Flags
+# ------------------------------------------------------------
+features:
+  enable_stage_a: true
+  enable_stage_b: true
+  enable_stage_c: true
+
+  enable_shadow_eval: true
+  enable_canary_prompts: true
+  enable_reasoning_audits: true
+
+  # If true → controller is allowed to auto-upgrade prompt strategies
+  enable_auto_prompt_correction: true
+
+# ------------------------------------------------------------
+# Logging and Paths
+# ------------------------------------------------------------
+paths:
+  scenario_file: ./config/demo_scenarios.yaml
+  log_dir: ./data/logs
+  canary_prompts: ./data/prompts/canary_prompts.yaml
+  diagnostic_queries: ./data/prompts/diagnostic_queries.yaml
+
+# ------------------------------------------------------------
+# Controller Settings
+# ------------------------------------------------------------
+controller:
+  retries_on_failure: 1
+  escalation_threshold: 2   # number of repeated failures before escalated correction
+

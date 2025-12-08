@@ -1,0 +1,85 @@
+# ============================================================
+# demo_scenarios.yaml
+# Synthetic Drift Scenarios for End-to-End Evaluation
+# ============================================================
+
+scenarios:
+
+  # ----------------------------------------------------------
+  # Scenario 1 — Healthy Pipeline
+  # ----------------------------------------------------------
+  - name: healthy_pipeline
+    description: "All stages operate normally. No drift expected."
+    parameters:
+      query: "What changed in the AI auditing policy in 2024?"
+      metadata:
+        domain: "policy"
+        max_query_tokens: 50
+        latency_ms: 120
+        token_count: 85
+        retrieval_ms: 30
+      retrieved_docs:
+        - {id: "doc1", content: "Policy updated in 2024 to include AI auditing guidelines."}
+        - {id: "doc2", content: "New auditing steps were added in 2024."}
+        - {id: "doc3", content: "Overview of AI auditing requirements."}
+      reference: "The policy was updated in 2024 to include new AI auditing guidelines."
+      output: "The policy was updated in 2024 with new guidelines for AI auditing."
+
+  # ----------------------------------------------------------
+  # Scenario 2 — Retrieval Drift (Stage B Failure)
+  # ----------------------------------------------------------
+  - name: retrieval_drift
+    description: "Retriever returns too few or irrelevant documents."
+    parameters:
+      query: "What changed in the AI auditing policy in 2024?"
+      metadata:
+        domain: "policy"
+        max_query_tokens: 50
+        latency_ms: 110
+        token_count: 70
+        retrieval_ms: 20
+      retrieved_docs:
+        - {id: "docX", content: "Unrelated billing policy update."}
+      reference: "The policy was updated in 2024 to include new AI auditing guidelines."
+      output: "The policy might have changed recently, but I'm not certain."
+
+  # ----------------------------------------------------------
+  # Scenario 3 — Reasoning Drift (Stage C Failure)
+  # ----------------------------------------------------------
+  - name: reasoning_drift
+    description: "Model output is poorly grounded despite good retrieval."
+    parameters:
+      query: "What changed in the AI auditing policy in 2024?"
+      metadata:
+        domain: "policy"
+        max_query_tokens: 50
+        latency_ms: 125
+        token_count: 78
+        retrieval_ms: 32
+      retrieved_docs:
+        - {id: "doc1", content: "Policy updated in 2024 to include AI auditing guidelines."}
+        - {id: "doc2", content: "New auditing steps were added in 2024."}
+        - {id: "doc3", content: "Overview of AI auditing requirements."}
+      reference: "The policy was updated in 2024 to include new AI auditing guidelines."
+      output: "The policy introduced new marketing obligations unrelated to AI."
+
+  # ----------------------------------------------------------
+  # Scenario 4 — Benign Drift (Passes All Stages)
+  # ----------------------------------------------------------
+  - name: benign_drift
+    description: "Small threshold changes, but still above passing levels."
+    parameters:
+      query: "What changed in the AI auditing policy in 2024?"
+      metadata:
+        domain: "policy"
+        max_query_tokens: 50
+        latency_ms: 130
+        token_count: 92
+        retrieval_ms: 35
+      retrieved_docs:
+        - {id: "doc1", content: "Policy updated in 2024 to include AI auditing guidelines."}
+        - {id: "doc2", content: "Details about related procedural improvements."}
+        - {id: "doc4", content: "Summary of auditing requirements introduced in 2024."}
+      reference: "The policy was updated in 2024 to include new AI auditing guidelines."
+      output: "The policy was updated in 2024 with auditing guidelines for AI systems."
+
