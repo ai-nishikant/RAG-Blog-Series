@@ -1,0 +1,59 @@
+# ============================================================
+# canary_prompts.yaml
+# Curated diagnostic prompts for early drift detection
+# ============================================================
+
+canary_prompts:
+
+  # ----------------------------------------------------------
+  # Policy domain – grounding and recency
+  # ----------------------------------------------------------
+  - id: policy_ai_auditing_2024
+    description: "Check that the system accurately describes the 2024 AI auditing policy update."
+    prompt: >
+      Explain the key changes introduced in the 2024 update to the AI auditing policy.
+
+  - id: policy_refund_window
+    description: "Check consistency on refund time window constraints."
+    prompt: >
+      What is the allowed time window for customers to submit a refund request?
+
+  # ----------------------------------------------------------
+  # Product behavior – feature availability
+  # ----------------------------------------------------------
+  - id: feature_bulk_export_free_tier
+    description: "Ensure the system does not hallucinate bulk export support in the free tier."
+    prompt: >
+      Does the free tier support bulk exports of all records?
+
+  - id: feature_bulk_export_paid_tier
+    description: "Check correct scoping of bulk export support in paid tiers."
+    prompt: >
+      In which subscription tiers is bulk export of all records available?
+
+  # ----------------------------------------------------------
+  # Compliance and limitations
+  # ----------------------------------------------------------
+  - id: limitation_data_retention
+    description: "Verify that data retention limits are described correctly."
+    prompt: >
+      How long is customer data retained, and are there any options to request early deletion?
+
+  - id: limitation_model_use_cases
+    description: "Ensure the assistant correctly states restricted use cases."
+    prompt: >
+      Are there any prohibited use cases for this AI system that customers should be aware of?
+
+  # ----------------------------------------------------------
+  # Operational behavior – latency and verbosity
+  # ----------------------------------------------------------
+  - id: operational_latency_expectations
+    description: "Check if the assistant explains typical response time expectations clearly."
+    prompt: >
+      What are the expected response times for typical queries, and under what conditions might responses be slower?
+
+  - id: operational_verbose_vs_concise
+    description: "Check whether the model can control verbosity on request."
+    prompt: >
+      Give me a very concise explanation of how the AI auditing workflow operates, in 2-3 sentences.
+

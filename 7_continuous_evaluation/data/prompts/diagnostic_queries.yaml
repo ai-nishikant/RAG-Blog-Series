@@ -1,0 +1,79 @@
+# ============================================================
+# diagnostic_queries.yaml
+# Structured diagnostic queries for evaluation / regression
+# ============================================================
+
+diagnostic_queries:
+
+  # ----------------------------------------------------------
+  # Policy and compliance scenarios
+  # ----------------------------------------------------------
+  - id: dq_policy_ai_auditing_summary
+    category: policy
+    description: "Summarize the key changes in the 2024 AI auditing policy."
+    query: >
+      Summarize the key changes introduced in the 2024 AI auditing policy update.
+
+  - id: dq_policy_ai_auditing_compare
+    category: policy
+    description: "Compare pre-2024 and post-2024 AI auditing requirements."
+    query: >
+      How do the AI auditing requirements before 2024 differ from those after the 2024 update?
+
+  - id: dq_refund_policy_exact_window
+    category: policy
+    description: "Check the exact refund window constraint."
+    query: >
+      Within how many days of purchase can a customer request a refund?
+
+  # ----------------------------------------------------------
+  # Product capabilities and limitations
+  # ----------------------------------------------------------
+  - id: dq_capability_bulk_export
+    category: product
+    description: "Verify statements about bulk export capabilities per tier."
+    query: >
+      Which subscription tiers support bulk export of all records, and are there any limits?
+
+  - id: dq_capability_integration_apis
+    category: product
+    description: "Check consistency of answers about integration APIs."
+    query: >
+      What integration APIs are available for connecting this system to third-party tools?
+
+  - id: dq_limitation_model_scope
+    category: product
+    description: "Ensure the model correctly communicates its own limitations."
+    query: >
+      What types of queries or tasks is this assistant not suitable for?
+
+  # ----------------------------------------------------------
+  # Operational & SLO-related queries
+  # ----------------------------------------------------------
+  - id: dq_operational_sla
+    category: operations
+    description: "Check consistency around SLA / uptime claims."
+    query: >
+      What is the expected uptime or SLA for this service, and how are incidents communicated?
+
+  - id: dq_operational_incident_response
+    category: operations
+    description: "Check clarity on incident handling processes."
+    query: >
+      How are operational incidents detected, escalated, and resolved for this system?
+
+  # ----------------------------------------------------------
+  # Evaluation-specific meta questions
+  # ----------------------------------------------------------
+  - id: dq_eval_explain_retrieval
+    category: evaluation
+    description: "Ask the system to explain how its retrieval step works."
+    query: >
+      Briefly explain how you retrieve relevant documents before generating an answer.
+
+  - id: dq_eval_explain_limitations
+    category: evaluation
+    description: "Ask the system to disclose why it might sometimes be wrong."
+    query: >
+      Explain why your answers might sometimes be incomplete or inaccurate.
+
