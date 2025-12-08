@@ -1,0 +1,21 @@
+# Core numerical & data utilities
+numpy>=1.24
+pandas>=2.0
+
+# YAML for config files
+pyyaml>=6.0
+
+# Notebooks / experiment environment
+jupyter>=1.0
+ipykernel>=6.0
+
+# Optional: LLM API clients (commented out until needed)
+# openai>=1.3
+# groq>=0.3
+# anthropic>=0.5
+
+# Plotting support (optional, useful for dashboards / notebooks)
+matplotlib>=3.8
+
+# Testing
+pytest>=7.0
